@@ -23,11 +23,24 @@ class game_logic:
     def fill_matrix(self,red_pos = None, red_val = None):
         object = game_object()
         matrix = object.create_matrix()
-        for i in range(3):
-            self.red_pos = input()
+
+        index = {
+        1 : (0,0),
+        2 : (0,1),
+        3 : (0,2),
+        4 : (1,0),
+        5 : (1,1),
+        6 : (1,2),
+        7 : (2,0),
+        8 : (2,1),
+        9 : (2,2)
+        }
+
+        for i in range(9):
+            self.red_pos = int(input())
             self.red_val = input()
-            matrix[0 , self.red_pos] = self.red_val
-            
+            matrix[index[self.red_pos][0], index[self.red_pos][1]] = self.red_val
+            print(matrix)
         return matrix
 
 
