@@ -37,8 +37,8 @@ class game_logic:
         }
 
         for i in range(9):
-            self.red_pos = int(input())
-            self.red_val = input()
+            self.red_pos = int(input('input red position:  '))
+            self.red_val = input('input red value:  ')
             matrix[index[self.red_pos][0], index[self.red_pos][1]] = self.red_val
             print(matrix)
         return matrix
@@ -48,4 +48,4 @@ if __name__ == '__main__':
     # object = game_object()
     # print(object.bounding_box()), print(object.bounding_box())
     logic = game_logic()
-    print(logic.fill_matrix(1,1))
+    print(logic.fill_matrix())
